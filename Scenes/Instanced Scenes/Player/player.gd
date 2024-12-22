@@ -13,12 +13,12 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_vector("moveLeft", "moveRight","moveUp","moveDown")
 	if direction:
-		facing = round(direction.angle()*2/PI)+1
+		facing = int(round(direction.angle()*2/PI)+1)
 		if $AnimatedSprite2D.animation == "Idle":
-			print("test 32")
+			print(facing)
 			match facing:
 				0: $AnimatedSprite2D.play("Move Up") 
-				1: $AnimatedSprite2D.play("Move Right") 
+				1: print("move right");$AnimatedSprite2D.play("Move Right"); 
 				2: $AnimatedSprite2D.play("Move Down") 
 				3: $AnimatedSprite2D.play("Move Left") 
 		velocity = direction * SPEED
@@ -27,6 +27,7 @@ func _physics_process(delta):
 	else:
 		if "Move" in $AnimatedSprite2D.animation:
 			$AnimatedSprite2D.animation = "Idle"
+			$AnimatedSprite2D.pause()
 			$AnimatedSprite2D.frame = facing
 		velocity = Vector2()
 	

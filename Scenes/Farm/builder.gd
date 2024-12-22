@@ -12,6 +12,8 @@ var disabled = true:
 		visible = !disabled
 @export var builderMoveSpeed = 5
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+var currentCategory = 0
+var currentSelection = 0
 func _process(delta):
 	
 	if disabled: return
@@ -29,4 +31,7 @@ func _process(delta):
 		var mousePos = get_local_mouse_position()
 		var tileMapPos = structureTileMap.local_to_map(mousePos)
 		print("Test 25")
-		structureTileMap.set_cells_terrain_connect([tileMapPos],0,0)
+		print(mousePos.y)
+		if mousePos.y > -104:
+			structureTileMap.set_cells_terrain_connect([tileMapPos],0,0)
+	

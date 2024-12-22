@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b2sdhbas7j82f"]
+
+[node name="MenuButton" type="Button"]
+custom_minimum_size = Vector2(80, 26)
+theme_override_font_sizes/font_size = 12
+text = "Decor"
