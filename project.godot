@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/show_image=false
 config/icon="res://icon.svg"
 
+[autoload]
+
+FarmData="*res://Global Scripts/farm_data.gd"
+
 [display]
 
 window/stretch/mode="viewport"

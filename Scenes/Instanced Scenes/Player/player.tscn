@@ -176,14 +176,17 @@ radius = 2.0
 height = 6.0
 
 [node name="Player" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_7jbox")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -4.5)
 sprite_frames = SubResource("SpriteFrames_7tnsn")
 animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2)
+position = Vector2(0, -3)
 shape = SubResource("CapsuleShape2D_eff21")
 
 [node name="Player Camera" type="Camera2D" parent="."]

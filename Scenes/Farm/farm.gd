@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var Player = get_tree().get_first_node_in_group("Player")
-@onready var Builder = $"Map/Player Structures/Builder"
+@onready var Builder = $"Map/Builder"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
